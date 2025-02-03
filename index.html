@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop Matching</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container text-center my-5">
+      <h1 class="mb-5">Match the following items with their names:</h1>
+      <div class="puzzle-container">
+        <div class="puzzle-piece left gap-3 ps-2">
+          <img
+            src="assets/space-img.jpeg"
+            alt="space-img"
+            width="100"
+            height="60"
+          />
+          <p class="mb-0">Space telescope</p>
+        </div>
+        <div class="puzzle-piece right" id="hubble" draggable="true"><p class="mb-0 ms-4">Hubble</p></div>
+      </div>
+      <div class="puzzle-container my-3">
+        <div class="puzzle-piece left gap-3 ps-2">
+          <img
+            src="assets/space-agency.jpeg"
+            alt="space-img"
+            width="100"
+            height="60"
+          />
+          <p class="mb-0">US space agency</p>
+        </div>
+        <div class="puzzle-piece right" id="nasa" draggable="true"><p class="mb-0 ms-4">NASA</p></div>
+      </div>
+      <div class="puzzle-container">
+        <div class="puzzle-piece left gap-3 ps-2">
+          <img
+            src="assets/space-shuttle.jpeg"
+            alt="space-img"
+            width="100"
+            height="60"
+          />
+          <p class="mb-0">Space shuttle</p>
+        </div>
+        <div class="puzzle-piece right" id="discovery" draggable="true"><p class="mb-0 ms-4">Discovery</p></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

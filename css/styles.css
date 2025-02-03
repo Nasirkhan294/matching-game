@@ -1,0 +1,51 @@
+.puzzle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.puzzle-piece {
+    position: relative;
+    width: 320px;
+    height: 80px;
+    border: 1px solid #676666;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.puzzle-piece:hover {
+  background-color: #fce5cd;
+}
+
+/* Left piece (with a puzzle knob on the right) */
+.puzzle-piece.left::after {
+    content: "";
+    position: absolute;
+    right: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: 1px solid #676666;
+    border-radius: 50%;
+}
+
+/* Right piece (with an indentation on the left) */
+.puzzle-piece.right {
+    margin-left: -7px;
+}
+
+.puzzle-piece.right::before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px #676666;
+}
