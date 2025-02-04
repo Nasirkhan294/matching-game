@@ -4,54 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drag and Drop Matching</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Custom Css -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="container text-center my-5">
+    <div>
       <h1 class="mb-5">Match the following items with their names:</h1>
       <div class="puzzle-container">
-        <div class="puzzle-piece left gap-3 ps-2">
-          <img
-            src="assets/space-img.jpeg"
-            alt="space-img"
-            width="100"
-            height="60"
-          />
-          <p class="mb-0">Space telescope</p>
+        <div class="puzzle">
+          <div class="puzzle-piece left-piece" id="telescope">
+            <img src="assets/space-img.jpeg" alt="Hubble" />
+            Space telescope
+          </div>
+          <div class="puzzle-piece right-piece" id="right-telescope" draggable="true">
+            Hubble
+          </div>
         </div>
-        <div class="puzzle-piece right" id="hubble" draggable="true"><p class="mb-0 ms-4">Hubble</p></div>
-      </div>
-      <div class="puzzle-container my-3">
-        <div class="puzzle-piece left gap-3 ps-2">
-          <img
-            src="assets/space-agency.jpeg"
-            alt="space-img"
-            width="100"
-            height="60"
-          />
-          <p class="mb-0">US space agency</p>
+        <div class="puzzle">
+          <div class="puzzle-piece left-piece" id="space-agency">
+            <img src="assets/space-agency.jpeg" alt="NASA" />
+            US space agency
+          </div>
+          <div class="puzzle-piece right-piece" id="right-agency" draggable="true">
+            NASA
+          </div>
         </div>
-        <div class="puzzle-piece right" id="nasa" draggable="true"><p class="mb-0 ms-4">NASA</p></div>
-      </div>
-      <div class="puzzle-container">
-        <div class="puzzle-piece left gap-3 ps-2">
-          <img
-            src="assets/space-shuttle.jpeg"
-            alt="space-img"
-            width="100"
-            height="60"
-          />
-          <p class="mb-0">Space shuttle</p>
+        <div class="puzzle">
+          <div class="puzzle-piece left-piece" id="shuttle">
+            <img src="assets/space-shuttle.jpeg" alt="Shuttle" />
+            Space Shuttle
+          </div>
+          <div class="puzzle-piece right-piece" id="right-shuttle" draggable="true">
+            Discovery
+          </div>
         </div>
-        <div class="puzzle-piece right" id="discovery" draggable="true"><p class="mb-0 ms-4">Discovery</p></div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="drag.js"></script>
   </body>
 </html>
